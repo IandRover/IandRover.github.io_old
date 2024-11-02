@@ -1,0 +1,106 @@
+.publication-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.publication-card {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.publication-image {
+    flex: 1;
+    max-width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publication-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.publication-content {
+    flex: 2;
+    padding-left: 1rem;
+}
+
+.publication-title {
+    font-size: 1.25rem;
+    font-weight: 600;  /* Changed from 'bold' to '500' for less boldness */
+    margin-bottom: 0.4rem;
+}
+
+.publication-authors {
+    font-weight: 300;  /* Changed from 'bold' to '500' for less boldness */
+    margin-bottom: 0.8rem;
+}
+
+.publication-links {
+    margin: 0.5rem 0;
+}
+
+.abstract-content {
+    display: none;
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: justify;
+}
+
+/* Link styles */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Previous styles remain the same */
+
+.publication-venue {
+    display: flex;
+    align-items: center;  /* Vertically center align items */
+    gap: 8px;            /* Space between venue text and badges */
+    margin: 1rem 0;
+    line-height: 20px;   /* Match the badge height */
+}
+
+.publication-badge {
+    display: inline-flex;
+    align-items: center;  /* Vertically center align badges */
+    gap: 4px;            /* Space between multiple badges */
+    margin-bottom: 0.4rem;
+}
+
+.badge {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;        /* Fixed height to match text */
+}
+
+/* Style for links within badges */
+.venue-badge a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Optional: Add hover effect */
+.badge:hover {
+    opacity: 0.8;
+}

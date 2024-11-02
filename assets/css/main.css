@@ -1,0 +1,81 @@
+/* Design Credits: Jon Barron and Abhishek Kar and Saurabh Gupta*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;800;900&display=swap');
+
+a {
+    color: #1772d0;
+    text-decoration: none;
+}
+
+a:focus, 
+a:hover {
+    color: #f09228;
+    text-decoration: none;
+}
+
+body,
+td,
+th {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+heading {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 30px;  /* Increased from 19px to 32px */
+    font-weight: 600;
+    display: inline-block;
+    margin: 20px 0;  /* Added some vertical margin for better spacing */
+} 
+
+.card-container {
+    margin: 20px 0;
+}
+
+.section-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    font-size: 1.2em;
+    color: #3498db;
+}
+
+.section-content {
+    padding-left: 20px;
+}
+
+.second-item, .service-item {
+    margin-bottom: 2px;
+    display: flex;
+}
+
+.item-year, .service-type {
+    flex-shrink: 0;
+    margin-left: 2px;
+    margin-right: 10px;
+    color: #7f8c8d;
+}
+
+.iten-description small {
+    color: #7f8c8d;
+    display: block;
+}
+
+.iten-description {
+    color: #2c3e50;
+}
