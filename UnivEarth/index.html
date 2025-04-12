@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="UnivEARTH Dataset: Benchmarking AI for Earth Observation.">
+  <meta name="keywords" content="Earth Observation, AI, Dataset, Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UnivEARTH Dataset: Benchmarking AI for Earth Observation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <!-- <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="#">
+            Earth Observation
+          </a>
+          <a class="navbar-item" href="#">
+            Climate Science
+          </a>
+          <a class="navbar-item" href="#">
+            Environmental Monitoring
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Towards LLM Agents for Earth Observation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://iandrover.github.io">Chia Hsiang Kao</a><sup>♠</sup>,</span>
+            <span class="author-block">
+              <a href="https://wenting-zhao.github.io">Wenting Zhao</a><sup>♠</sup>,</span>
+            <span class="author-block">
+              <a href="https://shreelekha.revankar.net">Shreelekha Revankar</a><sup>♠</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cam.cornell.edu/people/samuel-speas/">Samuel Speas</a><sup>♠</sup>,
+            </span>
+            <span class="author-block">
+              Snehal Bhagat<sup>♠</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://rajeev-datta.github.io">Rajeev Datta</a><sup>♠</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cpphoo.github.io">Cheng Perng Phoo</a><sup>♠</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.columbia.edu/~utkarshm/">Utkarsh Mall</a><sup>♥</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.columbia.edu/~vondrick/">Carl Vondrick</a><sup>♥</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~kb/">Kavita Bala</a><sup>♠</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~bharathh/">Bharath Hariharan</a><sup>♠</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>♠</sup>Cornell University,</span>
+            <span class="author-block"><sup>♥</sup>Columbia University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/AaronKao/UnivEARTH"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/Teasor.pdf" alt="UnivEARTH Dataset Examples">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">UnivEARTH</span> is a benchmark dataset designed to evaluate the capabilities of AI systems for Earth Observation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+            <div class="metric-card" style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; text-align: center;">
+              <h1 style="margin-top: 0; color: #3498db; font-size: 2.5rem">140</h1>
+              <p>High-Quality Questions</p>
+            </div>
+            <div class="metric-card" style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; text-align: center;">
+              <h2 style="margin-top: 0; color: #3498db; font-size: 2.5rem">13</h2>
+              <p>Topics</p>
+            </div>
+            <div class="metric-card" style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; text-align: center;">
+              <h3 style="margin-top: 0; color: #3498db; font-size: 2.5rem;">17</h3>
+              <p>Satellites and Sources</p>
+            </div>
+            <!-- <div class="metric-card" style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; text-align: center;">
+              <h3 style="margin-top: 0; color: #3498db;">33%</h3>
+              <p>LLM agent accuracy</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Earth Observation (EO) provides critical planetary data for environmental monitoring, disaster management, climate science, and other scientific domains.
+            Here we ask: <i><b>Are AI systems ready for reliable Earth Observation?</b></i>
+          </p>
+          <p>
+            We introduce UnivEARTH, a benchmark of 140 yes/no questions from NASA Earth Observatory articles across 13 topics and 17 satellite sensors. 
+            Using Google Earth Engine API as a tool, LLM agents can only achieve an accuracy of 33% because the code fails to run over 58% of the time.
+            We improve the failure rate for open models by fine-tuning synthetic data, allowing much smaller models (Llama-3.1-8B) to achieve comparable accuracy to much larger ones (e.g., DeepSeek-R1).
+          </p>
+          <p>
+            Taken together, our findings identify significant challenges to be solved before AI agents can automate earth observation, and suggest paths forward.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Dataset Description. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Description</h2>
+        <div class="content has-text-justified">
+          <p>
+            UnivEARTH (pronounced "universe") is a benchmark dataset designed to evaluate the capabilities of AI systems for Earth Observation. It consists of 140 high-quality yes/no questions spanning 13 diverse topics and 17 different satellite sensors and datasets. The questions are derived from NASA Earth Observatory articles and focus on comparative relationships in Earth observation data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Dataset Description. -->
+  </div>
+</section>
+
+<!-- Example Questions Gallery -->
+<section class="section">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Gallery</h2>
+        </div>
+      </div>
+<div class="question-gallery-container" style="position: relative; margin: 40px 0; max-width: 1200px; margin-left: auto; margin-right: auto;">
+  <!-- Navigation Buttons -->
+  <button id="gallery-prev" class="button is-rounded" style="position: absolute; left: -15px; top: 50%; transform: translateY(-50%); z-index: 10;">
+    <span class="icon">
+      <i class="fas fa-chevron-left"></i>
+    </span>
+  </button>
+  
+  <button id="gallery-next" class="button is-rounded" style="position: absolute; right: -15px; top: 50%; transform: translateY(-50%); z-index: 10;">
+    <span class="icon">
+      <i class="fas fa-chevron-right"></i>
+    </span>
+  </button>
+  
+  <!-- Gallery Container -->
+  <div class="gallery-wrapper" style="overflow: hidden;">
+    <div id="question-gallery-slider" style="display: flex; transition: transform 0.3s ease; margin: 0 5px;">
+      <!-- Questions will be loaded here dynamically -->
+      <div class="gallery-item" style="flex: 0 0 100%; text-align: center;">
+        <p>Loading examples...</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pagination Dots -->
+  <div id="gallery-pagination" class="has-text-centered" style="margin-top: 15px;"></div>
+</div>
+
+<script>
+  // Function to load and display question data in a swipeable gallery
+  function loadQuestionGallery() {
+    fetch('./data.json')
+      .then(response => response.json())
+      .then(data => {
+        const gallerySlider = document.getElementById('question-gallery-slider');
+        const pagination = document.getElementById('gallery-pagination');
+        const prevButton = document.getElementById('gallery-prev');
+        const nextButton = document.getElementById('gallery-next');
+        const galleryWrapper = document.querySelector('.gallery-wrapper');
+        
+        gallerySlider.innerHTML = ''; // Clear loading message
+        pagination.innerHTML = ''; // Clear pagination
+        
+        // Randomize the order of the examples
+        const shuffledData = [...data].sort(() => Math.random() - 0.5);
+        
+        // Fixed number of cards per page: always show 2 cards (or 1 on very small screens)
+        const itemsPerPage = window.innerWidth < 640 ? 1 : 2;
+        const itemWidth = 100 / itemsPerPage;
+        
+        // Create gallery items
+        shuffledData.forEach((item, index) => {
+          const galleryItem = document.createElement('div');
+          galleryItem.className = 'gallery-item';
+          galleryItem.style.cssText = `flex: 0 0 ${itemWidth}%; padding: 0 5px;`;
+          
+          galleryItem.innerHTML = `
+            <div class="card" style="overflow: hidden; margin: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); height: 250px;">
+              <div class="card-content" style="padding: 0; height: 100%;">
+                <div style="display: flex; flex-direction: row; height: 100%;">
+                  <div style="flex: 0 0 45%; position: relative; overflow: hidden;">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f5f5f5;">
+                      <img src="${item.thumbnail_url || '/api/placeholder/400/400'}" alt="Thumbnail" 
+                           style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;">
+                    </div>
+                  </div>
+                  <div style="flex: 0 0 55%; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+                    <div>
+                      <p style="font-size: 1rem; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                        <strong>Question:</strong> ${item.question}
+                      </p>
+                      <p style="font-size: 1rem; margin-bottom: 12px;">
+                        <strong>Answer:</strong> 
+                        <span class="answer-reveal" onmouseover="this.querySelector('.answer-text').style.opacity = '1';" 
+                              onmouseout="this.querySelector('.answer-text').style.opacity = '0';"
+                              style="position: relative; display: inline-block; cursor: pointer;">
+                          <span class="answer-hidden" style="background-color: #e0e0e0; padding: 3px 12px; border-radius: 14px; color: transparent; visibility: hidden; position: absolute;">
+                            ${item.answer}
+                          </span>
+                          <span class="answer-placeholder" style="background-color: #e0e0e0; padding: 3px 12px; border-radius: 14px; color: #888;">
+                            Hover to reveal
+                          </span>
+                          <span class="answer-text" style="position: absolute; top: 0; left: 0; padding: 3px 12px; border-radius: 14px; opacity: 0; transition: opacity 0.3s ease; background-color: ${item.answer === 'Yes' ? '#4CAF50' : '#F44336'}; color: white; width: 100%; text-align: center;">${item.answer}</span>
+                        </span>
+                      </p>
+                    </div>
+                    <div style="margin-top: 12px; display: flex; gap: 8px;">
+                      <a href="${item.url}" target="_blank" class="button is-small is-link is-light" style="font-size: 0.6rem;">
+                        <span class="icon is-small">
+                          <i class="fas fa-external-link-alt"></i>
+                        </span>
+                        <span>NASA Article</span>
+                      </a>
+                      <br/>
+                      <a href="${item.js_1_url}" target="_blank" class="button is-small is-info is-light" style="font-size: 0.6rem;">
+                        <span class="icon is-small">
+                          <i class="fas fa-code"></i>
+                        </span>
+                        <span>Verification Code</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+          
+          gallerySlider.appendChild(galleryItem);
+          
+          // Create pagination dot
+          if (index % itemsPerPage === 0) {
+            const dot = document.createElement('span');
+            dot.className = 'pagination-dot';
+            dot.style.cssText = 'display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ddd; margin: 0 5px; cursor: pointer;';
+            dot.dataset.index = index / itemsPerPage;
+            pagination.appendChild(dot);
+            
+            // Add click event to pagination dot
+            dot.addEventListener('click', function() {
+              currentPage = parseInt(this.dataset.index);
+              updateGallery();
+            });
+          }
+        });
+        
+        // Calculate total pages
+        const totalPages = Math.ceil(data.length / itemsPerPage);
+        
+        // Set first page as active
+        let currentPage = 0;
+        
+        // Update gallery function
+        function updateGallery() {
+          // Update slider position
+          gallerySlider.style.transform = `translateX(-${currentPage * (itemsPerPage * itemWidth)}%)`;
+          
+          // Update pagination dots
+          document.querySelectorAll('.pagination-dot').forEach((dot, index) => {
+            dot.style.backgroundColor = index === currentPage ? '#3498db' : '#ddd';
+          });
+          
+          // Update button states
+          prevButton.disabled = currentPage === 0;
+          nextButton.disabled = currentPage === totalPages - 1;
+        }
+        
+        // Initialize gallery
+        updateGallery();
+        
+        // Add event listeners for navigation buttons
+        prevButton.addEventListener('click', function() {
+          if (currentPage > 0) {
+            currentPage--;
+            updateGallery();
+          }
+        });
+        
+        nextButton.addEventListener('click', function() {
+          if (currentPage < totalPages - 1) {
+            currentPage++;
+            updateGallery();
+          }
+        });
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft' && currentPage > 0) {
+            currentPage--;
+            updateGallery();
+          } else if (e.key === 'ArrowRight' && currentPage < totalPages - 1) {
+            currentPage++;
+            updateGallery();
+          }
+        });
+        
+        // Add touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        galleryWrapper.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        galleryWrapper.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        });
+        
+        function handleSwipe() {
+          const swipeThreshold = 50;
+          if (touchEndX < touchStartX - swipeThreshold && currentPage < totalPages - 1) {
+            // Swipe left
+            currentPage++;
+            updateGallery();
+          } else if (touchEndX > touchStartX + swipeThreshold && currentPage > 0) {
+            // Swipe right
+            currentPage--;
+            updateGallery();
+          }
+        }
+        
+        // Handle window resize to adjust number of visible cards
+        window.addEventListener('resize', function() {
+          const newItemsPerPage = window.innerWidth < 640 ? 1 : 2;
+          
+          // Only update if items per page has changed
+          if (newItemsPerPage !== itemsPerPage) {
+            location.reload(); // Simple solution: reload the page
+            // A more complex solution would recalculate everything without reload
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error loading question data:', error);
+        document.getElementById('question-gallery-slider').innerHTML = `
+          <div class="gallery-item" style="flex: 0 0 100%;">
+            <div class="notification is-warning">
+              Failed to load examples. Please check if data.json is available.
+            </div>
+          </div>
+        `;
+      });
+  }
+  
+  // Load the gallery when the document is ready
+  document.addEventListener('DOMContentLoaded', loadQuestionGallery);
+</script>
+<!-- End Example Questions Gallery -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Intended Uses -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-4">Intended Uses</h2>
+          <ul>
+            <li>Benchmarking language models for Earth observation tasks</li>
+            <li>Evaluating AI systems' ability to ground answers in satellite imagery</li>
+            <li>Assessing models' capability to generate code for accessing and analyzing Earth observation data</li>
+            <li>Supporting research in scientific AI assistants for environmental monitoring, disaster management, and climate science</li>
+          </ul>
+        </div>
+      </div>
+      <!--/ Intended Uses -->
+
+      <!-- Limitations -->
+      <div class="column">
+        <h2 class="title is-4">Limitations</h2>
+        <div class="content">
+          <ul>
+            <li>The current benchmark comprises 140 questions, which could be expanded in future versions</li>
+            <li>Questions are in yes/no format only</li>
+            <li>The benchmark currently does not explicitly include questions where the ground truth answer is "inconclusive"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation Information</h2>
+    <p>Coming soon</p>
+    <!-- <pre><code>@article{kao2025univearth,
+  title   = {Towards LLM Agents for Earth Observation: The UnivEARTH Dataset},
+  author  = {Kao, Chia Hsiang and Zhao, Wenting and Revankar, Shreelekha and Speas, Samuel and 
+             Bhagat, Snehal and Datta, Rajeev and Phoo, Cheng Perng and Mall, Utkarsh and 
+             Vondrick, Carl and Bala, Kavita and Hariharan, Bharath},
+  journal = {arXiv preprint},
+  year    = {2025}
+}</code></pre> -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template adapted from <a href="https://nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
