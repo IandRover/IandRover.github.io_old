@@ -1668,7 +1668,7 @@
         "modality": "MODIS"
     },
     {
-        "question": "Did an island appear in the Caspian Sea within 4 km of coordinates 39.014501, 49.357405 on February 13, 2023, but did not exist on November 19, 2022?",
+        "question": "Did an island appear in the Caspian Sea within 4 km of coordinates 39.014501, 49.357405 on February 13, 2023, which did not exist on November 19, 2022?",
         "answer": "Yes",
         "url": "https://earthobservatory.nasa.gov/images/153799/satellites-spot-a-ghost-island",
         "post_id": "153799",
